@@ -15,4 +15,9 @@ public class Schiff : Fahrzeug
 		str += $"Es kann bis auf {Tiefgang}m sinken.";
 		return str;
 	}
+
+	public override void Hupen()
+	{
+		throw new NotImplementedException();
+	}
 }

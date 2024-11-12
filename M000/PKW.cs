@@ -15,4 +15,9 @@ public class PKW : Fahrzeug
 		str += $"Es fährt mit {Treibstoff}.";
 		return str;
 	}
+
+	public override void Hupen()
+	{
+		throw new NotImplementedException();
+	}
 }

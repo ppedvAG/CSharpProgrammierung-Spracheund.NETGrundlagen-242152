@@ -15,4 +15,9 @@ public class Flugzeug : Fahrzeug
 		str += $"Es kann bis auf {Flughoehe}m aufsteigen.";
 		return str;
 	}
+
+	public override void Hupen()
+	{
+		throw new NotImplementedException();
+	}
 }
