@@ -1,4 +1,17 @@
-﻿while (true)
+﻿using M000;
+
+PKW p = new PKW("VW", 200, 20000, "Benzin");
+Schiff s = new Schiff("Titanic", 50, 200_000_000, 20);
+Flugzeug f = new Flugzeug("Boeing", 1200, 50_000_000, 10000);
+
+Console.WriteLine(p.Info());
+Console.WriteLine(s.Info());
+Console.WriteLine(f.Info());
+
+
+
+
+while (true)
 {
 	double z1 = ZahlEingabe("Gib eine Zahl ein: ");
 	double z2 = ZahlEingabe("Gib eine weitere Zahl ein: ");
