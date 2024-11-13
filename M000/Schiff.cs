@@ -25,7 +25,7 @@ public class Schiff : Fahrzeug, IBeladbar
 
 	public void Belade(Fahrzeug fzg)
 	{
-		if (GeladenesFahrzeug != null)
+		if (GeladenesFahrzeug == null)
 		{
 			GeladenesFahrzeug = fzg;
 		}
