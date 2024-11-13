@@ -20,6 +20,24 @@ foreach (Fahrzeug f in fzg)
 }
 Console.WriteLine($"PKWs: {pkw}, Schiffe: {schiff}, Flugzeuge: {flugzeug}");
 
+void TesteBelade(object o1, object o2)
+{
+	if (o1 is IBeladbar && o2 is Fahrzeug)
+	{
+		IBeladbar b = (IBeladbar) o1;
+		b.Belade((Fahrzeug) o2);
+	}
+	else if (o2 is IBeladbar && o1 is Fahrzeug)
+	{
+		IBeladbar b = (IBeladbar) o2;
+		b.Belade((Fahrzeug) o1);
+	}
+	else
+	{
+        Console.WriteLine("Keines der gegebenen Objekte kann das andere aufladen");
+    }
+}
+
 //while (true)
 //{
 //	double z1 = ZahlEingabe("Gib eine Zahl ein: ");
