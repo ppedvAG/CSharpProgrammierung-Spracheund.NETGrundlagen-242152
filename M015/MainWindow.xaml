@@ -1,0 +1,39 @@
+﻿<Window x:Class="M015.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:M015"
+		DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="MainWindow" Height="450" Width="800"
+		WindowStartupLocation="CenterScreen"
+		Topmost="True" Background="#FFB5FF4F">
+	<StackPanel Margin="5">
+		<!--DataBinding-->
+		<!--Binding zw. einer GUI-Komponente und einem Backend Property-->
+		
+		<!--Drei Voraussetzungen: -->
+		<!--DataContext-->
+		<!--INotifyPropertyChanged-->
+		<!--ObservableCollection-->
+		
+		<!--DataContext-->
+		<!--Beschreibt, welche Daten per Binding zur Verfügung stehen-->
+		<!--Generell zwei Optionen: Das Window selbst, bei MVVM die ViewModel Klasse-->
+		<!--Zwei Optionen für Window selbst:-->
+		<!--DataContext="{Binding RelativeSource={RelativeSource Self}}"-->
+		<!--this.DataContext = this;-->
+		<Button Content="Fahrzeug erzeugen" Click="Button_Click"/>
+		<ListBox ItemsSource="{Binding Path=Fahrzeuge}"/>
+
+		<Slider Name="TestSlider"/>
+		<TextBlock Text="{Binding ElementName=TestSlider, Path=Value}"/>
+
+		<!--INotifyPropertyChanged-->
+		<!--Benachrichtigungsmechanismus, welcher die GUI über Änderungen im Backend benachrichtigt-->
+		<!--Siehe Backend-->
+		<TextBlock Text="{Binding Path=Counter}" FontSize="30"/>
+		<Button Content="Counter++" Click="Button_Click_1"/>
+		
+		<!--ObservableCollection-->
+		<!--Liste, welche Benachrichtigungen an die GUI sendet, wenn sich die Liste verändert-->
+	</StackPanel>
+</Window>
